@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;;
+  margin-top: 50px;
+  background-color: burlywood;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- Part 1: CSS3 Transitions & Animations --- */
+
+/* Basic styling for the button */
+.my-button {
+  /* Initial styles */
+  background-color: #7ec928;
+  padding: 15px 30px;
+  border-radius: 15px solid grey;
+  /* Add the transition for a smooth effect */
+  transition: background-color 0.5s ease-in, transform 0.5s ease-in-out;
+  color: white;
+}
+
+
+
+/* Hover state for the button */
+.my-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+/* --- Part 1b: CSS3 Keyframe Animations -loading spinner--- */ 
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #3498db; /* Blue */
+  border-radius: 50%;
+  animation: spin 2s linear infinite; /* means it will keep on spinning */
+  display: block;
+  margin: 50px auto; /* Center horizontally and add vertical space */
+  /* Center vertically using flexbox on body */
+}
+/* Keyframe animation for a loading spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.box{
+  width: 60px;
+  height: 60px;
+  background-color: coral;
+  margin-top: 20px;
+  transition: transform 0.5s ease;
+}
+.box:hover {
+  animation: colorChange 2s forwards;
+  transform: rotate(360deg);
+}
+@keyframes colorChange {
+    0% {background-color: lightblue;}
+    25% {background-color: lightgreen;}
+    50% {background-color: yellow;}
+    75% {background-color: orange;}
+    100% {background-color: coral;}
+}
